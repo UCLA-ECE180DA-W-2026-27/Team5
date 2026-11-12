@@ -1,0 +1,27 @@
+EXISTING TESTED WIRING - ESP32-S3
+
+TFT ST7789 (2.4 inch, 240 x 320; landscape rotation 1)
+VCC        Existing tested 3V3 supply
+LED        Existing tested 3V3 backlight connection
+GND        ESP32 GND
+CS         GPIO10
+DC         GPIO9
+RESET      GPIO8
+SDI/MOSI   GPIO11
+SCK        GPIO12
+MISO, touch and SD-card pins are unused.
+
+MAX98357A I2S amplifier
+VIN        Existing tested 3V3 supply (not a TX pin)
+GND        Common GND with ESP32 and TFT
+BCLK       GPIO4
+LRC        GPIO5
+DIN        GPIO6
+GAIN / SD  Keep your previously tested wiring
+SPK+       Speaker red wire
+SPK-       Speaker black wire (NOT GND)
+
+Use the current working power arrangement. A pin labeled 5Vin has not been
+verified as a usable output on your board. Do not use TX as a power source.
+This package makes no power-wiring changes. Check the final camera-board pin
+assignment and supply capability when integrating motors and other modules.
